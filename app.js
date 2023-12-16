@@ -10,21 +10,27 @@ const productManager = new ProductManager();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.send('Hola');
-});
 
 app.get('/products', (req, res) => {
-  const allProducts = productManager.getAllProducts();
+  const { limit } = req.query;
+
+  let allProducts = productManager.getAllProducts();
+
+  
+  if (limit) {
+    const limitNumber = parseInt(limit);
+    allProducts = allProducts.slice(0, limitNumber);
+  }
+
   res.json(allProducts);
 });
 
 app.post('/products', (req, res) => {
   const newProduct = req.body;
   productManager.addProduct(newProduct);
-  res.send('producto añadido');
+  res.send('producto agregado');
 });
 
 app.listen(port, () => {
-  console.log(`escuchando puerto ${port}`);
+  console.log(`escuchando en puerto ${port}`);
 });

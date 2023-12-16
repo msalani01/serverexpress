@@ -34,6 +34,10 @@ class ProductManager {
     return newProduct;
   }
 
+  getAllProducts() {
+    return this.products;
+  }
+
   getProductById(productId) {
     return this.products.find(product => product.id === productId);
   }
