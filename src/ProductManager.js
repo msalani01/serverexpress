@@ -11,6 +11,7 @@ class ProductManager {
       const data = fs.readFileSync(this.filePath, 'utf8');
       return JSON.parse(data);
     } catch (error) {
+      console.error(`Error al cargar productos desde el archivo ${this.filePath}: ${error.message}`);
       return [];
     }
   }
