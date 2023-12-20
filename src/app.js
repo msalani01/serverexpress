@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const path = require('path'); 
 const ProductManager = require('./ProductManager'); 
 const { send } = require('process');
-
+const session = require('express-session');
 const app = express();
 const port = 8080;
 
@@ -11,6 +11,12 @@ const productManager = new ProductManager('C:/Users/M/Documents/Dev/Servidor_Exp
 var __dirname = "C:/Users/M/Documents/Dev/Servidor_Express"
 
 const productsFilePath = path.join(__dirname, 'src', 'products.json');
+
+app.use(session({
+  secret: 'tu_secreto', 
+  resave: false,
+  saveUninitialized: true
+}));
 
 async function cargarProductos() {
   try {
@@ -55,10 +61,33 @@ app.post('/products', (req, res) => {
   const newProduct = req.body;
   productManager.addProduct(newProduct);
   res.send('producto agregado');
+
+  
 });
 
 app.listen(port, () => {
   console.log(`app escuchando en ${port}`);
 });
+
+app.get('/cart', (req, res) => {
+  const productsInCart = obtenerProductosEnElCarrito(req);
+  res.json({ cart: productsInCart });
+});
+
+
+function obtenerProductosEnElCarrito(req) {
+ 
+  const session = req.session;
+
+
+  if (session.cart) {
+ 
+    return session.cart;
+  } else {
+   
+    return [];
+  }
+}
+
 
 cargarProductos()
