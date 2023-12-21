@@ -62,7 +62,32 @@ app.post('/products', (req, res) => {
   productManager.addProduct(newProduct);
   res.send('producto agregado');
 
+  const { title, description, code, price, stock, category, thumbnails } = req.body;
+
   
+  if (!title || !description || !code || !price || !stock || !category) {
+    return res.status(400).json({ error: 'Todos los campos son obligatorios excepto thumbnails' });
+  }
+
+
+  const newProductcart = {
+    id: productManager.getNextId(),
+    title,
+    description,
+    code,
+    price,
+    status: true, // Por defecto
+    stock,
+    category,
+    thumbnails: thumbnails || [], 
+  };
+
+
+  productManager.addProduct(newProductcart);
+
+
+  res.status(201).json(newProductcart);
+
 });
 
 app.listen(port, () => {

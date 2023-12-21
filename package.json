@@ -5,4 +5,9 @@
     "express-session": "^1.17.3",
     "fs": "^0.0.1-security"
   }
+  "scripts": {
+
+    "start": "node src/app.js",
+
+   },
 }

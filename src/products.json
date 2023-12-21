@@ -358,5 +358,365 @@
     "thumbnail": "ruta/a/imagen5.jpg",
     "code": "MNO345",
     "stock": 25
+  },
+  {
+    "id": 41,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 42,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 43,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 44,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 45,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 46,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 47,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 48,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 49,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 50,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 51,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 52,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 53,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 54,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 55,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 56,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 57,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 58,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 59,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 60,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 61,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 62,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 63,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 64,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 65,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 66,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 67,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 68,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 69,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 70,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 71,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 72,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 73,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 74,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 75,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
+  },
+  {
+    "id": 76,
+    "title": "Producto 1",
+    "description": "Descripción del Producto 1",
+    "price": 19.99,
+    "thumbnail": "ruta/a/imagen1.jpg",
+    "code": "ABC123",
+    "stock": 50
+  },
+  {
+    "id": 77,
+    "title": "Producto 2",
+    "description": "Descripción del Producto 2",
+    "price": 29.99,
+    "thumbnail": "ruta/a/imagen2.jpg",
+    "code": "DEF456",
+    "stock": 30
+  },
+  {
+    "id": 78,
+    "title": "Producto 3",
+    "description": "Descripción del Producto 3",
+    "price": 49.99,
+    "thumbnail": "ruta/a/imagen3.jpg",
+    "code": "GHI789",
+    "stock": 20
+  },
+  {
+    "id": 79,
+    "title": "Producto 4",
+    "description": "Descripción del Producto 4",
+    "price": 9.99,
+    "thumbnail": "ruta/a/imagen4.jpg",
+    "code": "JKL012",
+    "stock": 40
+  },
+  {
+    "id": 80,
+    "title": "Producto 5",
+    "description": "Descripción del Producto 5",
+    "price": 39.99,
+    "thumbnail": "ruta/a/imagen5.jpg",
+    "code": "MNO345",
+    "stock": 25
   }
 ]
