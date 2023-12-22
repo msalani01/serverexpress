@@ -68,7 +68,7 @@ class ProductManager {
 }
 
 
-const pm = new ProductManager('Products.json');
+const pm = new ProductManager('products.json');
 const product = pm.getProductById(2);
 console.log(product);
 
