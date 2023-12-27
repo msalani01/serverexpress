@@ -1,18 +1,43 @@
 const express = require('express');
+const exphbs = require('express-handlebars');
+const http = require('http');
+const socketIO = require('socket.io');
 const fs = require('fs').promises;
 const path = require('path');
 const ProductManager = require('./ProductManager');
 const session = require('express-session');
 
 const app = express();
-const port = 8080;
+const port = 9090;
 const router = express.Router();
+const server = http.createServer(app);
+const io = socketIO(server);
 
 app.use('/api/carts', router);
 
 const productManager = new ProductManager('C:/Users/M/Documents/Dev/Servidor_Express/src/products.json');
 
 const productsFilePath = path.join(__dirname, 'src', 'products.json');
+
+io.on('connection', (socket) => {
+  console.log('Usuario conectado:', socket.id);
+
+
+});
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+
+
+
+app.use(session({
+  secret: 'tu_secreto',
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use(session({
   secret: 'tu_secreto',
@@ -35,20 +60,20 @@ async function cargarProductos() {
 const carts = [];
 
 router.post('/', (req, res) => {
-
   const cartId = generateCartId();
-
-
   const newCart = {
     id: cartId,
     products: [],
   };
 
-
   carts.push(newCart);
+
+
+  req.session.cart = newCart;
 
   res.status(201).json(newCart);
 });
+
 
 function generateCartId() {
   return Math.random().toString(36).substr(2, 9);
@@ -116,6 +141,11 @@ router.post('/:cid/product/:pid', (req, res) => {
   }
 
   res.status(201).json(cart);
+});
+
+app.get('/', (req, res) => {
+  const allProducts = productManager.getAllProducts();
+  res.render('home', { products: allProducts });
 });
 
 app.get('/products/:pid', (req, res) => {
