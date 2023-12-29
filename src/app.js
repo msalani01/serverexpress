@@ -15,9 +15,11 @@ const io = socketIO(server);
 
 app.use('/api/carts', router);
 
-const productManager = new ProductManager('C:/Users/M/Documents/Dev/Servidor_Express/src/products.json');
 
-const productsFilePath = path.join(__dirname, 'src', 'products.json');
+
+const productManager = new ProductManager (path.join(__dirname, 'products.json'));
+
+const productsFilePath = path.join(__dirname, 'products.json');
 
 io.on('connection', (socket) => {
   console.log('Usuario conectado:', socket.id);
@@ -26,10 +28,13 @@ io.on('connection', (socket) => {
 });
 
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs.engine());
-app.set('view engine', 'handlebars');
+app.use(express.static(path.join(__dirname, "../views")));
+
+
+app.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main" }));
+app.set('views', path.join(__dirname, '..', 'views'));
+
+
 
 
 
@@ -39,11 +44,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(session({
-  secret: 'tu_secreto',
-  resave: false,
-  saveUninitialized: true
-}));
 
 async function cargarProductos() {
   try {

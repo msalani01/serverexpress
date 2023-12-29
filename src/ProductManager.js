@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 class ProductManager {
   constructor(filePath) {
@@ -68,7 +69,7 @@ class ProductManager {
 }
 
 
-const pm = new ProductManager('products.json');
+const pm = new ProductManager (path.join(__dirname, 'products.json'));
 const product = pm.getProductById(2);
 console.log(product);
 
