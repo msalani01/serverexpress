@@ -22,11 +22,9 @@ io.on('connection', (socket) => {
   console.log('Usuario conectado:', socket.id);
 });
 
-
 app.use(express.static(path.join(__dirname, "../views")));
-app.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main" }));
-app.set('views', path.join(__dirname, '..', 'views'));
-app.set('view engine', 'handlebars');
+app.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main", layoutsDir: path.resolve(__dirname, "../views/layouts") }));
+app.set('view engine', 'hbs');
 
 app.use(session({
   secret: 'tu_secreto',
@@ -41,10 +39,12 @@ async function cargarProductos() {
     products.forEach((product) => {
       productManager.addProduct(product);
     });
+    console.log('Productos cargados con éxito:', products);
   } catch (error) {
     console.error('Error al cargar productos desde el archivo:', error.message);
   }
 }
+
 
 const carts = [];
 
