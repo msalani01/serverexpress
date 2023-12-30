@@ -15,35 +15,24 @@ const io = socketIO(server);
 
 app.use('/api/carts', router);
 
-
-
-const productManager = new ProductManager (path.join(__dirname, 'products.json'));
-
+const productManager = new ProductManager(path.join(__dirname, 'products.json'));
 const productsFilePath = path.join(__dirname, 'products.json');
 
 io.on('connection', (socket) => {
   console.log('Usuario conectado:', socket.id);
-
-
 });
 
 
 app.use(express.static(path.join(__dirname, "../views")));
-
-
 app.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main" }));
 app.set('views', path.join(__dirname, '..', 'views'));
-
-
-
-
+app.set('view engine', 'handlebars');
 
 app.use(session({
   secret: 'tu_secreto',
   resave: false,
   saveUninitialized: true
 }));
-
 
 async function cargarProductos() {
   try {
@@ -68,12 +57,10 @@ router.post('/', (req, res) => {
 
   carts.push(newCart);
 
-
   req.session.cart = newCart;
 
   res.status(201).json(newCart);
 });
-
 
 function generateCartId() {
   return Math.random().toString(36).substr(2, 9);
@@ -82,13 +69,11 @@ function generateCartId() {
 router.get('/:cartId', (req, res) => {
   const cartId = req.params.cartId;
 
-
   const cart = carts.find(cart => cart.id === cartId);
 
   if (!cart) {
     return res.status(404).json({ error: 'Carrito no encontrado' });
   }
-
 
   const productsInCart = cart.products;
 
@@ -97,15 +82,13 @@ router.get('/:cartId', (req, res) => {
 
 router.post('/:cartId/products/', (req, res) => {
   const cartId = req.params.cartId;
-  const productId = req.body.productId; 
-
+  const productId = req.body.productId;
 
   const cart = carts.find(cart => cart.id === cartId);
 
   if (!cart) {
     return res.status(404).json({ error: 'Carrito no encontrado' });
   }
-
 
   const productToAdd = productManager.getProductById(productId);
 
@@ -122,21 +105,17 @@ router.post('/:cid/product/:pid', (req, res) => {
   const cartId = req.params.cid;
   const productId = req.params.pid;
 
-
   const cart = carts.find((cart) => cart.id === cartId);
 
   if (!cart) {
     return res.status(404).json({ error: 'Carrito no encontrado' });
   }
 
-
   const existingProduct = cart.products.find((product) => product.product === productId);
 
   if (existingProduct) {
-
     existingProduct.quantity++;
   } else {
-
     cart.products.push({ product: productId, quantity: 1 });
   }
 
@@ -237,15 +216,10 @@ app.post('/products', (req, res) => {
   res.status(201).json(newProductcart);
 });
 
-
-
 app.get('/cart', (req, res) => {
   const productsInCart = obtenerProductosEnElCarrito(req);
   res.json({ cart: productsInCart });
 });
-
-
-
 
 function obtenerProductosEnElCarrito(req) {
   const session = req.session;
